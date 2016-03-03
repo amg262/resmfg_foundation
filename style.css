@@ -1,7 +1,7 @@
 /*
-Theme Name:         pad_foundation
-Theme URI:          https://github.com/amgxyz/pad_foundation
-Github Theme URI:   https://github.com/olefredrik/FoundationPress
+Theme Name:         RES Manufacturing
+Theme URI:          https://github.com/amgxyz/resmfg_foundation
+Github Theme URI:   https://github.com/amgxyz/pad_foundation
 Description:        Foundation + Sass + Gulp is a WordPress starter theme based on Foundation 6 by Zurb. 
 Version:            1.0.0
 Author:             Platypus Advertising + Design
@@ -42,3 +42,5 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
   color: #d2232a;
   font-size: 34px;
 }
+
+/*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }

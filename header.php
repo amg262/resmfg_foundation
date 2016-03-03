@@ -39,13 +39,24 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
 		</div>
+		<div class="top-bar-left">
+			<ul class="menu">
 
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<ul class="menu">
+				<?php if ( get_field( 'logo_type', 'option' ) == 'Image' ) {
+					echo 'Image';
+					$image = get_field( 'logo_image', 'option' );
+					echo '<a href='.esc_url( home_url( '/' ) ).' ><img src='.$image['url'].' alt=='.$image['alt'].' width="250" height="auto" /></a>';
+				} else if ( get_field( 'logo_type', 'option' ) == 'Text' ) {
+					echo 'text';
+
+				} else { ?>
 					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
-			</div>
+				<?php } ?>
+
+			</ul>
+		</div>
+		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+			
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
 

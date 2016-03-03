@@ -30,7 +30,7 @@
 				        get_field('fax', 'options') ||
 				        get_field('email', 'options') ||
 				        is_home() || is_front_page()) { ?>
-				            <address class="contact-address text-right medium-text-right small-text-center right column seven large-9 medium-9 small-12" itemscope itemtype="http://schema.org/PostalAddress">
+				            <address class="contact-address text-center right column seven large-12 medium-12 small-12" itemscope itemtype="http://schema.org/PostalAddress">
 				                <small><?php if(get_field('company_name','options')) { echo "&copy; ".date('Y')."&nbsp;"; echo "<span itemprop='name'>"; the_field('company_name','options'); echo "</span>"; } ?>
 				                <?php if(get_field('address_line_1','options')) { echo "<span itemprop='streetAddress addressLocality'>"; the_field('address_line_1','options'); echo "</span>&nbsp;"; } ?>
 				                
