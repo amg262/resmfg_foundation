@@ -34,7 +34,7 @@
 	<?php endif; ?>
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
-
+	
 	<header id="masthead" class="site-header" role="banner">
 		<div data-sticky-container>
 		  <div class="sticky" id="sticky" data-sticky data-margin-top="0" style="width:100%;" data-margin-bottom="0">
