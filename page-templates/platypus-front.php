@@ -7,18 +7,22 @@ get_header(); ?>
 <header id="front-hero" role="banner">
 	<div class="marketing">
 		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
-			<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>
+			<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
+			<h4 class="subheader">
+				Innovative metal forming.<br>
+				Complex assembly technology.<br>
+				<strong>EXPECTATIONS EXCEEDED.</strong>
+			</h4>
+			<!--<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>-->
 		</div>
 
 		<div id="watch">
-			<section id="stargazers">
+			<!--<section id="stargazers">
 				<a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a>
 			</section>
 			<section id="twitter">
 				<a href="https://twitter.com/olefredrik">@olefredrik</a>
-			</section>
+			</section>-->
 		</div>
 	</div>
 
