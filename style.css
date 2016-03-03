@@ -40,13 +40,13 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 
 .testimonial {
   color: #d2232a;
-  font-size: 34px;
+  font-size: 30px;
 }
 .top-bar, .top-bar ul {
     background-color: #FEFEFE !important;
 }
 
 .top-bar .menu a {
-    color: #0076AD !important;
+    color: #0076AD !important
 }
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }
