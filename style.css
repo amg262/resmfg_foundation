@@ -50,6 +50,10 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
     color: #0076AD !important
 }
 
+.sticky {
+    z-index: 9999 !important;
+}
+
 .homepage-subheading .sub_header p {
     background-color: #000;
     color: #FFBE32;
