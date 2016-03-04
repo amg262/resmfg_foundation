@@ -49,4 +49,11 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 .top-bar .menu a {
     color: #0076AD !important
 }
+
+.homepage-subheading .sub_header p {
+    background-color: #000;
+    color: #FFBE32;
+    padding: 20px 40px;
+    margin-bottom: 0;
+}
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }

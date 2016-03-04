@@ -54,15 +54,15 @@ get_header(); ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 <div class="section-divider">
-	<hr />
+	<!--<hr />-->
 </div>
 
 <div class="row">
 	<section class="benefits">
-		<header>
+		<!--<header>
 			<h2>Build Foundation based sites, powered by WordPress</h2>
 			<h4>Foundation is the professional choice for designers, developers and teams. <br /> WordPress is by far, <a href="http://trends.builtwith.com/cms">the world's most popular CMS</a> (currently powering 38% of the web).</h4>
-		</header>
+		</header>-->
 
 		<div class="semantic">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
@@ -90,12 +90,12 @@ get_header(); ?>
 			<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
 		</div>
 
-		<div class="why-foundation">
+		<!--<div class="why-foundation">
 			<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
-		</div>
+		</div>-->
 
 	</section>
-
+</div>
 	<section>
 		<div>
 			<?php
@@ -121,16 +121,19 @@ get_header(); ?>
 				?>
 		</div>
 
-		<div>
-			<?php if ( get_field( 'sub_header' ) ) {
-				$sub_header = get_field( 'sub_header' );
-				echo $sub_header;
-			} ?>
+		<div class="">
+			
+			<div class="homepage-subheading">
+				<?php if ( get_field( 'sub_header' ) ) {
+					$sub_header = get_field( 'sub_header' );
+					echo '<div class="sub_header">'.$sub_header.'</div>';
+				} ?>
 
-			<?php if ( get_field( 'sub_header_banner' ) ) {
-				$sub_header = get_field( 'sub_header_banner' );
-				echo '<a href='.$sub_header['url'].'><img src="'.$sub_header['url'].'" alt="'.$sub_header['alt'].'" /></a>';
-			} ?>
+				<?php if ( get_field( 'sub_header_banner' ) ) {
+					$sub_header = get_field( 'sub_header_banner' );
+					echo '<a href='.$sub_header['url'].'><img src="'.$sub_header['url'].'" alt="'.$sub_header['alt'].'" style="max-height:600px; height: 100%;" /></a>';
+				} ?>
+			</div>
 
 		</div>
 
@@ -157,9 +160,9 @@ get_header(); ?>
 						echo '<p>'.$content.'</p>';
 					}
 				} ?>
-			<div>
+			<p>
 				<a href="/case-studies" ><button style="background-color:#6ec176; color:#FFF; padding:15px 30px;">View Our Case Studies</button></a>
-			</div>
+			</p>
 		</div>
 	</section>
 </div>
