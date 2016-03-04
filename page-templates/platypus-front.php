@@ -139,8 +139,10 @@ get_header(); ?>
 
 		<div class="text-center">
 			<?php 
+				echo get_field('testimonial_section');
 				if ( get_field('testimonial_section') == "Single" ) {
 					if ( get_field( 'testimonial' ) ) {
+						var_dump(get_field( 'testimonial' ));
 						$testimonial = (array) get_field( 'testimonial' );
 						$title = $testimonial['post_title'];
 						$content = $testimonial['post_content'];
