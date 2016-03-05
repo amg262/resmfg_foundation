@@ -5,6 +5,40 @@ Template Name: Platypus Front
 get_header(); ?>
 
 <header id="front-hero" role="banner">
+
+	<div class="banner-container left columns twelve large-12 medium 12 small-12">
+		<div class="banner-text text-justify left columns large-7 medium 7 small-7">
+
+	
+		</div>
+
+		<div class="banner-image left columns large-5 medium-5 small-5">
+
+		<?php
+
+		if ( get_field( 'banner_type', 'option' ) == 'Image' ) {
+
+			if ( get_field( 'banner_image', 'option' ) ) {
+				$image = get_field( 'banner_image', 'option' );
+				echo '<a href='.$image['url'].'><img src="'.$image['url'].'" alt="'.$image['alt'].'"/></a>';
+			} else {
+
+			}
+
+		} else if ( get_field( 'banner_type', 'option' ) == 'Slider' ) {
+			
+			if ( get_field( 'banner_slider', 'option' ) ) {
+				$slider = get_field( 'banner_slider', 'option' );
+				echo do_shortcode($slider);
+			} else {
+				
+			}
+
+		} else {
+
+		} ?>
+		</div>
+	</div>
 	<div class="marketing">
 		<div class="tagline">
 			<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
