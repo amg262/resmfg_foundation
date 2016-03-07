@@ -36,8 +36,10 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	
 	<header id="masthead" class="site-header" role="banner">
-		<div data-sticky-container>
-		  <div class="sticky" id="sticky" data-sticky data-margin-top="0" style="width:100%;" data-margin-bottom="0">
+		<?php if ( get_field( 'toggle_sticky_header', 'option' ) == 'Enabled' ): ?>
+			<div data-sticky-container>
+			  <div class="sticky" id="sticky" data-sticky data-margin-top="0" style="width:100%;" data-margin-bottom="0">
+		<?php endif; ?> 
 				<div class="title-bar" data-responsive-toggle="site-navigation">
 					<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 					<div class="title-bar-title">
@@ -70,8 +72,10 @@
 						<?php endif; ?>
 					</div>
 				</nav>
+			<?php if ( get_field( 'toggle_sticky_header', 'option' ) == 'Enabled' ): ?>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 	</header>
 
 	<section class="container">

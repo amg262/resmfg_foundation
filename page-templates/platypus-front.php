@@ -7,7 +7,7 @@ get_header(); ?>
 <header id="front-hero" role="banner">
 
 	<div class="banner-container left columns twelve large-12 medium 12 small-12">
-		<div class="banner-text text-left left columns large-7 medium-6 small-12">
+		<div class="banner-text text-left marketing left columns large-7 medium-6 small-12">
 			<h1 class="subheader">
 				Innovative metal forming.<br>
 				Complex assembly technology.<br>
@@ -51,13 +51,13 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="marketing">
-		<div class="tagline">
+		<!--<div class="tagline">-->
 			<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
-			<h4 class="subheader">
+			<!--<h4 class="subheader">
 				Innovative metal forming.<br>
 				Complex assembly technology.<br>
 				<strong>EXPECTATIONS EXCEEDED.</strong>
-			</h4>
+			</h4>-->
 			<!--<a role="button" class="download large button sites-button hide-for-small-only" href="https://github.com/olefredrik/foundationpress">Download FoundationPress</a>-->
 		</div>
 

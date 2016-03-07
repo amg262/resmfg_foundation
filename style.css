@@ -64,4 +64,83 @@ address {
     padding: 20px 40px;
     margin-bottom: 0;
 }
+
+.banner-container {
+  min-height: 600px;
+  height:100%;
+}
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }
+
+
+@media only screen {
+
+}
+
+/**
+ * Foundation: XLarge.
+ * Min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues 
+ */
+@media only screen and (max-width: 120em) {
+ 
+}
+
+/**
+ * Foundation: Large.
+ * Min-width 1025px and max-width 1440px, use when QAing large screen-only issues
+ */
+@media only screen and (max-width: 90em) { 
+ 
+}
+
+/**
+ * Foundation: Medium.
+ * Min-width 641px and max-width 1024px, use when QAing tablet-only issues
+ */
+@media only screen and (max-width: 64em) {
+    
+}
+
+/**
+ * Foundation: Small.
+ * Max-width 640px, mobile-only styles, use when QAing mobile issues
+ */
+@media only screen and (max-width: 40em) {
+    
+}
+
+/**
+ * Foundation: XXLarge
+ * Min-width 1921px, xxlarge screens
+ */
+@media only screen and (min-width: 120.063em) {
+
+}
+
+/* Apply styles to screens in landscape orientation */
+@media only screen and (orientation: landscape) {
+
+}
+
+/* Apply styles to screens in portrait orientation */
+@media only screen and (orientation: portrait) {
+
+}
+
+/* We also use Modernizr to add a .touch class to the body when applicable */
+/* You can prepend this class to anything and it will style only for touch devices */
+.touch .your-element {
+
+}
+@media screen and (max-width: 782px) {
+    html #wpadminbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0!important;
+        z-index: 1000 !important;
+        height: 46px;
+        min-width: 300px;
+    }
+    .logged-in .site-header {
+        top: 0;
+    }
+}
