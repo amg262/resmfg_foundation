@@ -38,7 +38,7 @@ function register_cpt_case_studies() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => array( 'slug' => 'case-study' ),
+        'rewrite' => array( 'slug' => 'case-studies' ),
         'capability_type' => 'post'
     );
     register_post_type( 'case-study', $args );
