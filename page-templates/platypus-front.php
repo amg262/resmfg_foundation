@@ -7,19 +7,30 @@ get_header(); ?>
 <header id="front-hero" role="banner">
 
 	<div class="banner-container left columns twelve large-12 medium 12 small-12">
-		<div class="banner-text text-justify left columns large-7 medium 7 small-7">
+		<div class="banner-text text-left left columns large-7 medium-6 small-12">
+			<h1 class="subheader">
+				Innovative metal forming.<br>
+				Complex assembly technology.<br>
+				<strong>EXPECTATIONS EXCEEDED.</strong>
+			</h1>
 
-	
 		</div>
 
-		<div class="banner-image left columns large-5 medium-5 small-5">
+		<div class="banner-image left columns large-5 medium-6 small-12">
 
 		<?php
 
 		if ( get_field( 'banner_type', 'option' ) == 'Image' ) {
 
 			if ( get_field( 'banner_image', 'option' ) ) {
+
+				if ( get_field( 'banner_text', 'option' ) ) {
+					$text = get_field( 'banner_text', 'option' );
+				}
+
 				$image = get_field( 'banner_image', 'option' );
+
+				echo '<h3>'.$text.'</h3>';
 				echo '<a href='.$image['url'].'><img src="'.$image['url'].'" alt="'.$image['alt'].'"/></a>';
 			} else {
 
@@ -173,16 +184,25 @@ get_header(); ?>
 
 		<div class="text-center">
 			<?php 
-				echo get_field('testimonial_section');
+				//echo get_field('testimonial_section');
 				if ( get_field('testimonial_section') == "Single" ) {
 					if ( get_field( 'testimonial' ) ) {
-						var_dump(get_field( 'testimonial' ));
-						$testimonial = (array) get_field( 'testimonial' );
-						$title = $testimonial['post_title'];
-						$content = $testimonial['post_content'];
+						
+						$testimonial = get_field( 'testimonial' );
+
+						foreach ($testimonial as $post) {
+							setup_postdata($post);
+							//var_dump($post);
+							_e( $post->post_title, 'resmfg_foundation' );
+							_e( $post->post_content, 'resmfg_foundation' );
+						}
+						//var_dump($testimonial);
+						//echo $testimonial['post_title'];
+						//echo $testimonial['post_content'];
+						//echo $title;
 						//var_dump($testimonial);
 						//echo '<h2>'.$title.'</h2>';
-						echo '<p>'.$content.'</p>';
+						//echo '<p>'.$content.'</p>';
 					}
 				} elseif ( get_field('testimonial_section') == "Multiple" ) {
 
@@ -195,7 +215,9 @@ get_header(); ?>
 						//echo '<h2>'.$title.'</h2>';
 						echo '<p>'.$content.'</p>';
 					}
-				} ?>
+				} 
+				wp_reset_postdata();
+				?>
 			<p>
 				<a href="/case-studies" ><button style="background-color:#6ec176; color:#FFF; padding:15px 30px;">View Our Case Studies</button></a>
 			</p>
