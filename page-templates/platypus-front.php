@@ -7,7 +7,7 @@ get_header(); ?>
 <header id="front-hero" role="banner">
 
 	<div class="banner-container left columns twelve large-12 medium 12 small-12">
-		<div class="banner-text text-left marketing left columns large-7 medium-6 small-12">
+		<div class="banner-text text-left marketing left columns large-7 medium-12 small-12">
 			<h1 class="subheader">
 				Innovative metal forming.<br>
 				Complex assembly technology.<br>
@@ -16,7 +16,7 @@ get_header(); ?>
 
 		</div>
 
-		<div class="banner-image left columns large-5 medium-6 small-12">
+		<div class="banner-image left columns large-5 medium-12 small-12">
 
 		<?php
 
@@ -219,7 +219,11 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 			<p>
-				<a href="/case-studies" ><button style="background-color:#6ec176; color:#FFF; padding:15px 30px;">View Our Case Studies</button></a>
+				<?php if ( get_field( 'button_link', 'option' ) ):
+					$link = get_field( 'button_link', 'option' );
+				endif; ?>
+
+				<a href="<?php echo $link; ?>" ><button style="background-color:#6ec176; color:#FFF; padding:15px 30px;">View Our Case Studies</button></a>
 			</p>
 		</div>
 	</section>
