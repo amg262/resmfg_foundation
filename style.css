@@ -85,6 +85,11 @@ address {
     margin: 0 0 0 10px !important;
 }
 
+.bucket-container {
+  /*min-height: 600px;
+  height:100%;*/
+}
+
 .homepage-subheading .sub_header p {
   background-color: #000;
     color: #FFCA59;
@@ -95,8 +100,9 @@ address {
 }
 
 .subheader-banner {
-  max-height: 600px;
-  height: 100%;
+  /*max-height: 600px;*/
+  /*min-height: 200px;
+  height: 100%;*/
   max-width: 3000px;
   width: 100%;
 }

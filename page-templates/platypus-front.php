@@ -142,22 +142,48 @@ get_header(); ?>
 	</section>
 </div>
 	<section>
-		<div class="">
+		<div class="bucket-container">
 			<?php
 				// check if the repeater field has rows of data
 				if( have_rows('homepage_buckets') ):
 
+					$total = count( get_field( 'homepage_buckets' ) );
+					$count = 0;
+				 	echo $total;
 				 	// loop through the rows of data
+
 				    while ( have_rows('homepage_buckets') ) : the_row();
 
-				        // display a sub field value
-				        the_sub_field('bucket_title');
-				        the_sub_field('bucket_image');
-				        $page = get_sub_field('bucket_page');
+				    	if ($count == 0): ?>
+				    		<div class="text-center small-up-1 medium-up-2 large-up-3">
+				    	<?php endif; ?>
+
+						 <div class="column">
+						 	<div>
+							 	<?php
+
+							 	$title = get_sub_field('bucket_title');
+							 	$image = get_sub_field( 'bucket_image' );
+							 	$page = get_sub_field('bucket_page');
+
+								echo '<a href="#"><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><h5>'.$title.'</h5></a>'; ?>
+							 </div>
+						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
+						 </div>
+
+						<?php $count++;
+				        
+				        if ($count == 6): ?>
+				        	</div><!--end of grid-->
+				        <?php endif; ?>
+
+				        <?php //the_sub_field('bucket_title');
+				        //the_sub_field('bucket_image');
+				        //$page = get_sub_field('bucket_page');
 				        //var_dump($page);
 				        //echo $page['url'];
 
-
+				        
 				    endwhile;
 
 
@@ -165,7 +191,8 @@ get_header(); ?>
 
 				?>
 		</div>
-
+	</section>
+	<section>
 		<div class="">
 			
 			<div class="homepage-subheading">
