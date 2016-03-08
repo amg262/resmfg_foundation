@@ -102,14 +102,14 @@ get_header(); ?>
 	<!--<hr />-->
 </div>
 
-<div class="row">
-	<section class="benefits">
+<!--<div class="row">
+	<section class="benefits">-->
 		<!--<header>
 			<h2>Build Foundation based sites, powered by WordPress</h2>
 			<h4>Foundation is the professional choice for designers, developers and teams. <br /> WordPress is by far, <a href="http://trends.builtwith.com/cms">the world's most popular CMS</a> (currently powering 38% of the web).</h4>
 		</header>-->
 
-		<div class="semantic">
+		<!--<div class="semantic">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
 			<h3>Semantic</h3>
 			<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
@@ -135,12 +135,12 @@ get_header(); ?>
 			<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
 		</div>
 
-		<!--<div class="why-foundation">
+		<div class="why-foundation">
 			<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
 		</div>-->
 
-	</section>
-</div>
+	<!--</section>
+</div>-->
 	<section>
 		<div class="bucket-container">
 			<?php
@@ -192,6 +192,7 @@ get_header(); ?>
 				?>
 		</div>
 	</section>
+	<div style="clear:both; height: 0;"></div>
 	<section>
 		<div class="">
 			
