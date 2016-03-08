@@ -64,9 +64,6 @@ address {
 
 /* --- FRONT PAGE TEMPLATE STYLES --- */
 
-#front-hero {
-    background: url("../images/demo/hero-bg-foundation-6-large.svg") bottom center fixed !important;
-}
 
 .banner-container {
   min-height: 600px;
