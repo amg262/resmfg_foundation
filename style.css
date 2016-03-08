@@ -63,7 +63,9 @@ address {
 }
 
 /* --- FRONT PAGE TEMPLATE STYLES --- */
-
+#front-hero {
+    background-attachment: fixed !important;
+}
 
 .banner-container {
   min-height: 600px;
@@ -84,10 +86,12 @@ address {
 }
 
 .homepage-subheading .sub_header p {
-    background-color: #000;
-    color: #FFBE32;
-    padding: 20px 40px;
+  background-color: #000;
+    color: #FFCA59;
+    padding: 3% 10%;
     margin-bottom: 0;
+    line-height: 3;
+    font-size: 20px;
 }
 
 .subheader-banner {
