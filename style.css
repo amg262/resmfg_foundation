@@ -69,6 +69,11 @@ address {
   min-height: 600px;
   height:100%;
 }
+
+
+.soliloquy-wrapper{
+  margin: 0 auto !important;
+}
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }
 
 
