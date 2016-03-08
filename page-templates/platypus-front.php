@@ -110,27 +110,27 @@ get_header(); ?>
 		</header>-->
 
 		<!--<div class="semantic">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
+			<img src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
 			<h3>Semantic</h3>
 			<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
 		</div>
 
 		<div class="responsive">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/responsive.svg" alt="responsive">
+			<img src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/images/demo/responsive.svg" alt="responsive">
 			<h3>Responsive</h3>
 			<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
 
 		</div>
 
 		<div class="customizable">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/customizable.svg" alt="customizable">
+			<img src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/images/demo/customizable.svg" alt="customizable">
 			<h3>Customizable</h3>
 			<p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
 
 		</div>
 
 		<div class="professional">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/professional.svg" alt="professional">
+			<img src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/images/demo/professional.svg" alt="professional">
 			<h3>Professional</h3>
 			<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
 		</div>
@@ -164,9 +164,11 @@ get_header(); ?>
 
 							 	$title = get_sub_field('bucket_title');
 							 	$image = get_sub_field( 'bucket_image' );
-							 	$page = get_sub_field('bucket_page');
+							 	$page =  get_sub_field('bucket_page');
 
-								echo '<a href="#"><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><h5>'.$title.'</h5></a>'; ?>
+							 	//var_dump($page);
+
+								echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><p><h3>'.$title.'</h3></p></a>'; ?>
 							 </div>
 						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
 						 </div>
@@ -186,7 +188,7 @@ get_header(); ?>
 				        
 				    endwhile;
 
-
+				    wp_reset_postdata();
 				endif;
 
 				?>

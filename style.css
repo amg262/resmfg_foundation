@@ -96,7 +96,8 @@ address {
 .bucket-container .column img {
   opacity: 1;
 }
-.bucket-container .column img:hover {
+.bucket-container .column img:hover,
+.bucket-container .column a:hover {
   opacity: .8;
 }
 .homepage-subheading .sub_header p {
