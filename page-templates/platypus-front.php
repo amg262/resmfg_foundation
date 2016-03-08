@@ -6,7 +6,7 @@ get_header(); ?>
 
 <header id="front-hero" role="banner">
 
-	<div class="banner-container left columns twelve large-12 medium 12 small-12">
+	<div class="banner-container left columns large-12 medium 12 small-12">
 		<div class="banner-text text-left marketing left columns large-7 medium-12 small-12">
 			<h1 class="subheader">
 				Innovative metal forming.<br>
@@ -142,7 +142,7 @@ get_header(); ?>
 	</section>
 </div>
 	<section>
-		<div>
+		<div class="buckets-container left text-center columns large-12 medium 12 small-12">
 			<?php
 				// check if the repeater field has rows of data
 				if( have_rows('homepage_buckets') ):
