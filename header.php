@@ -36,10 +36,12 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	
 	<header id="masthead" class="site-header" role="banner">
+
 		<?php if ( get_field( 'toggle_sticky_header', 'option' ) == 'Enabled' ): ?>
 			<div data-sticky-container>
 			  <div class="sticky" id="sticky" data-sticky data-margin-top="0" style="width:100%;" data-margin-bottom="0">
 		<?php endif; ?> 
+
 				<div class="title-bar" data-responsive-toggle="site-navigation">
 					<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 					<div class="title-bar-title">
@@ -52,9 +54,10 @@
 						<?php if ( get_field( 'logo_type', 'option' ) == 'Image' ) {
 							echo 'Image';
 							$image = get_field( 'logo_image', 'option' );
-							echo '<a href='.esc_url( home_url( '/' ) ).' ><img src='.$image['url'].' alt=='.$image['alt'].' width="250" height="auto" /></a>';
+							_e( '<a href='.esc_url( home_url( '/' ) ).' ><img src='.$image['url'].' alt=='.$image['alt'].' width="250" height="auto" /></a>', 'resmfg_foundation');
+
 						} else if ( get_field( 'logo_type', 'option' ) == 'Text' ) {
-							echo 'text';
+
 
 						} else { ?>
 							<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
@@ -65,6 +68,8 @@
 				<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 					
 					<div class="top-bar-right">
+
+
 						<?php foundationpress_top_bar_r(); ?>
 
 						<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>

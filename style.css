@@ -74,6 +74,10 @@ address {
 .soliloquy-wrapper{
   margin: 0 auto !important;
 }
+
+.off-canvas-content, .off-canvas-content {
+    box-shadow: none !important;
+}
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }
 
 
