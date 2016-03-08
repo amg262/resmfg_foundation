@@ -176,7 +176,7 @@ get_header(); ?>
 
 				<?php if ( get_field( 'sub_header_banner' ) ) {
 					$sub_header = get_field( 'sub_header_banner' );
-					echo '<a href='.$sub_header['url'].'><img src="'.$sub_header['url'].'" alt="'.$sub_header['alt'].'" style="max-height:600px; height: 100%;" /></a>';
+					echo '<a href='.$sub_header['url'].'><img class="subheader-banner" src="'.$sub_header['url'].'" alt="'.$sub_header['alt'].'"  /></a>';
 				} ?>
 			</div>
 
