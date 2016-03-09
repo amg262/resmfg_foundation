@@ -149,14 +149,79 @@ get_header(); ?>
 
 					$total = count( get_field( 'homepage_buckets' ) );
 					$count = 0;
+					$grid_ratio = 0;
+					$grid_var = 2;
 				 	echo $total;
 				 	// loop through the rows of data
 
 				    while ( have_rows('homepage_buckets') ) : the_row();
 
-				    	if ($count == 0): ?>
-				    		<div class="text-center small-up-1 medium-up-2 large-up-3">
-				    	<?php endif; ?>
+				    	if ($count == 0):
+
+				    		$grid_ratio = ($total / $grid_var);
+				    		echo $grid_ratio;
+				    		switch ($grid_ratio) {
+							    case ( $grid_ratio <= 1 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-2">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $grid_ratio <= 2 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-3">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $grid_ratio <= 4 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $grid_ratio <= 6 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $grid_ratio <= 8 ):
+							        _e( '<div class="text-center small-up-2 medium-up-2 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+						        case ( $grid_ratio > 8 ):
+							        _e( '<div class="text-center small-up-2 medium-up-3 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+							    default:
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-3">', 'resmfg_foundation' );
+							}
+
+				    		/*switch ($total) {
+							    case ( $total < 3 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-2">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $total < 6 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-2">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $total < 8 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-3">', 'resmfg_foundation' );
+							        break;
+						        case ( $total == 8 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $total < 10 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-3">', 'resmfg_foundation' );
+							        break;
+
+						        case ( $total == 10 ):
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-5">', 'resmfg_foundation' );
+							        break;
+
+							    case ( $total > 10 ):
+							        _e( '<div class="text-center small-up-2 medium-up-3 large-up-4">', 'resmfg_foundation' );
+							        break;
+
+							    default:
+							        _e( '<div class="text-center small-up-1 medium-up-2 large-up-3">', 'resmfg_foundation' );
+							}*/
+				    		
+				    	endif; ?>
 
 						 <div class="column">
 						 	<div>
@@ -175,7 +240,7 @@ get_header(); ?>
 
 						<?php $count++;
 				        
-				        if ($count == 6): ?>
+				        if ($count === $total): ?>
 				        	</div><!--end of grid-->
 				        <?php endif; ?>
 
