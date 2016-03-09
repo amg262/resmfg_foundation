@@ -62,6 +62,10 @@ address {
   height:0;
 }
 
+.company-copyright {
+  font-style: normal;
+}
+
 /* --- FRONT PAGE TEMPLATE STYLES --- */
 #front-hero {
     background-attachment: fixed !important;
@@ -103,7 +107,7 @@ address {
 .homepage-subheading .sub_header p {
   background-color: #000;
     color: #FFCA59;
-    padding: 3% 10%;
+    padding: 4% 10%;
     margin-bottom: 0;
     line-height: 3;
     font-size: 20px;

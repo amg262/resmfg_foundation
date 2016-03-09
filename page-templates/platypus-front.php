@@ -142,7 +142,7 @@ get_header(); ?>
 	<!--</section>
 </div>-->
 	<section>
-		<div class="bucket-container">
+		<div class="bucket-container columns small-12 medium-12 large-12">
 			<?php
 				// check if the repeater field has rows of data
 				if( have_rows('homepage_buckets') ):
