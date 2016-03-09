@@ -18,7 +18,7 @@
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 				<br>
 				
-				<div class="address-info text-center right column large-12 medium-12 small-12">
+				<div class="contact-address text-center right column large-12 medium-12 small-12">
 					<p>
 						<?php if(get_field('company_name','options') ||
 				        get_field('address_line_1','options') ||
@@ -32,7 +32,7 @@
 				        get_field('email', 'options') ||
 				        get_field( 'copyright', 'option' )) { ?>
 				            <address class="contact-address text-center right column large-12 medium-12 small-12" itemscope itemtype="http://schema.org/PostalAddress">
-				                <small><?php if(get_field('company_name','options')) { echo "<span class='company-copyright'>&copy; ".date('Y')."&nbsp;</span>"; echo "<span class='company-copyright' itemprop='name'>"; the_field('company_name','options'); echo "</span>&nbsp;&nbsp;"; } ?>
+				                <small><?php if(get_field('company_name','options')) { echo "<span class='company-copyright'>&copy; ".date('Y')."&nbsp;</span>"; echo "<span class='company-copyright' itemprop='name'>"; the_field('company_name','options'); echo "</span>.&nbsp;"; } ?>
 				                <?php if ( get_field( 'copyright', 'option' ) ){ echo '<span class="company-copyright">'; the_field( 'copyright', 'option' ); echo '</span><br>'; } ?>
 				                <?php if(get_field('address_line_1','options')) { echo "<span itemprop='streetAddress addressLocality'>"; the_field('address_line_1','options'); echo "</span>&nbsp;"; } ?>
 				                
@@ -48,12 +48,13 @@
 				            </address><!-- .contact-address -->
 				        <?php } ?>
 				    </p>
-			        <br>
+			        <p>&nbsp;</p>
 			        <?php if ( get_field( 'platypus_link', 'option' ) !== 'Hide' ): ?>
 	                    <?php if(is_home() || is_front_page()) { ?>
 	                    <small>Design and Developed by <a itemprop="url" href="http://platypus-ad.com" target="_blank">Platypus Advertising + Design</a></small>
 	                    <?php }
 	                endif; ?>
+
 			</footer>
 		</div>
 
