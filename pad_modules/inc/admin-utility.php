@@ -10,7 +10,7 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme General Settings',
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
+		'capability'	=> 'manage_options',
 		'redirect'		=> false,
 		'icon_url'		=> 'dashicons-admin-tools'
 	));
@@ -27,36 +27,6 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
-	/*acf_add_options_page(array(
-		'page_title' 	=> 'Admin Options',
-		'menu_title'	=> 'Admin Options',
-		'menu_slug' 	=> 'admin-options',
-		'capability'	=> 'manage_options',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-admin-tools'
-	));*/
-
-	/*acf_add_options_sub_page(array(
-		'page_title' 	=> 'Admins',
-		'menu_title'	=> 'Admins Only',
-		'parent_slug'	=> 'admin-options',
-		'capability'	=> 'manage_options',
-		'redirect'	=> true
-	));
-
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Exec. Admin',
-		'menu_title'	=> 'Admins Only',
-		'parent_slug'	=> 'admin-options',
-		'capability'	=> 'executive_access'
-	));
-
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Root Admin',
-		'menu_title'	=> 'Admins Only',
-		'parent_slug'	=> 'admin-options',
-		'capability'	=> 'root_access'
-	));*/
 
 }
 add_action( 'admin_menu', 'display_admin_option' );
@@ -69,38 +39,16 @@ function display_admin_option() {
 		acf_add_options_page(array(
 			'page_title' 	=> 'Root Admin',
 			'menu_title'	=> 'Root Admin',
-			'menu_slug' 	=> 'root-admin-options',
+			'menu_slug' 	=> 'root-admin-optoins',
 			'capability'	=> 'root_access',
 			'redirect'		=> false,
-			'icon_url'		=> 'dashicons-admin-tools'
+			'icon_url'		=> 'dashicons-admin-network'
 		));
 
-		/*acf_add_options_sub_page(array(
-			'page_title' 	=> 'Admins',
-			'menu_title'	=> 'Admins Only',
-			'parent_slug'	=> 'admin-options',
-			'capability'	=> 'manage_options',
-			'redirect'	=> true
-		));
-
-		acf_add_options_sub_page(array(
-			'page_title' 	=> 'Exec. Admin',
-			'menu_title'	=> 'Admins Only',
-			'parent_slug'	=> 'admin-options',
-			'capability'	=> 'executive_access'
-		));
-
-		acf_add_options_sub_page(array(
-			'page_title' 	=> 'Root Admin',
-			'menu_title'	=> 'Admins Only',
-			'parent_slug'	=> 'admin-options',
-			'capability'	=> 'root_access'
-		));*/
 	}
 }
 
 function is_pad_root_admin() {
-
 
 		global $user;
 		$super_admin = false;
@@ -127,7 +75,7 @@ function hide_pad_acf_menu( $show ) {
 	$user = wp_get_current_user();
 
 	$curr = (array) $user->roles;
-	$roles = array( 'root_admin', 'super_root', 'administrator' );
+	$roles = array( 'root_admin', 'super_root', 'administrator', 'webmaster' );
 	
 
 	$roles_found = array_intersect($curr, $roles);
