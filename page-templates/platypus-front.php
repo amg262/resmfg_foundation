@@ -337,9 +337,20 @@ get_header(); ?>
 
 							
 							<script type="text/javascript" charset="utf-8">
-							  $(window).load(function() {
+							  /*$(window).load(function() {
 							    $('.flexslider').flexslider();
-							  });
+							  });*/
+
+							  jQuery(document).ready(function($){
+ 
+   								$('.flexslider').flexslider({
+     								//animation: "slide",
+      								//animationLoop: false,
+      								//itemWidth: 257,
+      								//itemMargin: 5
+	
+  									});
+   							});
 							</script>
 
 							<?php
@@ -357,7 +368,10 @@ get_header(); ?>
 											echo '<li>';
 											$title = $post->post_title;
 											$content = $post->post_content;
-											echo $title;
+
+											_e( '<h4>'.$title.'</h4>', 'resmfg_foundation' );
+											_e( '<p>'.$content.'</p>', 'resmfg_foundation' );
+
 											echo '</li>';
 											$counter++;
 										//}
