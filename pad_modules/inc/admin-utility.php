@@ -12,7 +12,7 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' 	=> 'theme-general-options',
 		'capability'	=> 'manage_options',
 		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-admin-tools'
+		'icon_url'		=> 'dashicons-list-view'
 	));
 
 	acf_add_options_sub_page(array(
@@ -49,12 +49,12 @@ function display_admin_option() {
 
 
 		acf_add_options_page(array(
-			'page_title' 	=> 'Admin II',
-			'menu_title'	=> 'Admin II',
-			'menu_slug' 	=> 'admin-ii-options',
+			'page_title' 	=> 'Administrator',
+			'menu_title'	=> 'Administrator',
+			'menu_slug' 	=> 'Administrator-options',
 			'capability'	=> 'admin_2_access',
 			'redirect'		=> false,
-			'icon_url'		=> 'dashicons-admin-network'
+			'icon_url'		=> 'dashicons-unlock'
 		));
 
 	
@@ -106,7 +106,7 @@ function hide_pad_acf_menu( $show ) {
 	$user = wp_get_current_user();
 
 	$curr = (array) $user->roles;
-	$roles = array( 'root_admin', 'administrator_2', 'administrator', 'webmaster' );
+	$roles = array( 'root_admin', 'administrator_2' );
 	
 
 	$roles_found = array_intersect($curr, $roles);

@@ -38,7 +38,7 @@ function setup_pad_modules_scripts() {
 add_action( 'admin_init', 'flush_pad_permalinks' );
 
 function flush_pad_permalinks() {
-	register_cpt_news();
+	register_cpt_news(); 
 	register_cpt_case_studies();
 	register_cpt_testimonial();
 	flush_rewrite_rules();
