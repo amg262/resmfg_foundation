@@ -45,14 +45,16 @@ require_once( 'library/custom-nav.php' );
 require_once( 'library/sticky-posts.php' );
 
 /**
-* pad_s+ : loads script-styles file for making on the file script styles
+* pad+ : loads script-styles file for making on the file script styles
 */
-require get_template_directory() . '/pad_s/script-styles.php';
+require get_template_directory() . '/pad/script-styles.php';
 
 /**
-* pad_s+ : loads script-styles file for making on the file script styles
+* pad+ : loads script-styles file for making on the file script styles
 */
-require get_template_directory() . '/pad_s/cpt.php';
+require get_template_directory() . '/pad/cpt.php';
+
+require get_template_directory() . '/pad/image-sizes.php';
 
 /**
 * Enqueue the plugins JS and CSS files
@@ -67,7 +69,7 @@ function pad_foundation_load_scripts() {
 	//wp_register_script( 'foundation_js', get_template_directory().'/foundation/js/foundation.js', array('jquery'));
 	//wp_register_script( 'foundation_min_js', get_template_directory().'/foundation/js/foundation.min.js', array('jquery'));
 	//wp_register_script( 'foundation_min_vendor', get_template_directory().'/foundation/js/vendor/what-input.min.js', array('jquery'));
-	wp_register_script( 'pad_foundation_js', get_template_directory_uri().'/pad_s/pad_s.js', array('jquery'));
+	wp_register_script( 'pad_foundation_js', get_template_directory_uri().'/pad/pad.js', array('jquery'));
 	wp_register_script( 'pad_flexslider_js', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider.js', array('jquery'));
 	//wp_register_script( 'pad_flexslider_min', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider-min.js', array('jquery'));
 
@@ -76,7 +78,7 @@ function pad_foundation_load_scripts() {
 	//wp_register_style( 'foundation_flex_css', get_template_directory().'/foundation/css/foundation-flex.css');
 	//wp_register_style( 'foundation_min_css', get_template_directory().'/foundation/css/foundation.min.css');
 	wp_register_style( 'pad_foundation_style_css', get_template_directory_uri().'/style.css');
-	wp_register_style( 'pad_foundation_css', get_template_directory_uri().'/pad_s/pad_s.css');
+	wp_register_style( 'pad_foundation_css', get_template_directory_uri().'/pad/pad.css');
 	wp_register_style( 'pad_flexslider_css', get_template_directory_uri().'/assets/components/flexslider/flexslider.css');
 
 
@@ -102,7 +104,7 @@ function pad_foundation_load_scripts() {
 
 }
 /**
-* pad_s : adds ACF options pages in dashboard
+* pad : adds ACF options pages in dashboard
 */
 if( function_exists('acf_add_options_page') ) {
 
