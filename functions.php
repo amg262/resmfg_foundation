@@ -128,5 +128,29 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+add_filter('acf/settings/show_admin', 'hide_acf_menu');
+
+function hide_acf_menu( $show ) {
+	
+	global $user;
+	$user = wp_get_current_user();
+
+	$curr = (array) $user->roles;
+	$roles = array('root','administrator');
+
+
+	if ( array_intersect($curr, $roles) ) {
+	    //The user has the "author" role
+	   // var_dump($roles);
+	    $show = false;
+	}
+    
+    //return $show;
+    return $show;
+    
+}
+/** If your site requires protocol relative url's for theme assets, uncomment the line below */
+// require_once( 'library/protocol-relative-theme-assets.php' );
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
