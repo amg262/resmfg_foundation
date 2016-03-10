@@ -153,6 +153,10 @@ function hide_acf_menu( $show ) {
     return $show;
     
 }
+
+
+//ADD A HOOK TO FLUSH PERMALIBNKS AFTER THEME IS ACTIVATED !!!
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
