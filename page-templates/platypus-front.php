@@ -4,6 +4,8 @@ Template Name: Platypus Front
 */
 get_header(); ?>
 
+
+
 <header id="front-hero" role="banner">
 
 	<div class="banner-container left columns twelve large-12 medium 12 small-12">
@@ -331,17 +333,41 @@ get_header(); ?>
 							
 					} elseif ( get_field('testimonial_section') === "Multiple" ) {
 
+						if ( get_field( 'testimonials' ) ): ?>
 
-						$testimonial = (array) get_field( 'testimonial' );
-						$counter = 0;
+							
+							<script type="text/javascript" charset="utf-8">
+							  $(window).load(function() {
+							    $('.flexslider').flexslider();
+							  });
+							</script>
 
-						foreach ($testimonial as $post) {
-							setup_postdata($post);
-							$title = $post->post_title;
-							$content = $post->post_content;
-							$counter++;
-						}
-						
+							<?php
+							$testimonials = array();
+							$testimonials = (array) get_field( 'testimonials' );
+							$counter = 0; ?>
+							
+							<div class="flexslider">
+
+								<ul class="slides">	
+									<?php foreach ($testimonials as $post):			
+										//foreach ($testimonial as $post) {
+
+											setup_postdata($post);
+											echo '<li>';
+											$title = $post->post_title;
+											$content = $post->post_content;
+											echo $title;
+											echo '</li>';
+											$counter++;
+										//}
+									endforeach; ?>
+
+									</ul>
+								</div>
+
+						<?php endif;
+
 
 					} else {
 
