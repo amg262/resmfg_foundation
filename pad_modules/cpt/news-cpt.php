@@ -27,7 +27,7 @@ function register_cpt_news() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_icon' => 'dashicons-format-aside',
+        'menu_icon' => 'dashicons-welcome-write-blog',
         'show_in_rest'=> true,
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,

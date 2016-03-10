@@ -358,31 +358,33 @@ get_header(); ?>
 							$testimonials = (array) get_field( 'testimonials' );
 							$counter = 0; ?>
 							
-							<div class="small-12 flexslider">
+							<div class="row text-center columns small-12 medium-12 large-12">
+								<div class="small-12 flexslider">
 
-								<ul class="slides">	
-									<?php foreach ($testimonials as $post):			
-										//foreach ($testimonial as $post) {
+									<ul class="slides">	
+										<?php foreach ($testimonials as $post):			
+											//foreach ($testimonial as $post) {
 
-											setup_postdata($post);
-											echo '<li class="slide">';
-											$title = $post->post_title;
-											$content = $post->post_content;
-											$excerpt = $post->post_excerpt;
-											$title_cap = strtoupper($title);
+												setup_postdata($post);
+												echo '<li class="slide">';
+												$title = $post->post_title;
+												$content = $post->post_content;
+												$excerpt = $post->post_excerpt;
+												$title_cap = strtoupper($title);
 
-											echo '<h3>'.$content.'</h3>';
-											echo '<h5>'.$title_cap.'</h5>';
-											echo '<br>';
-											echo $excerpt;
+												echo '<h3>'.$content.'</h3>';
+												echo '<h5>'.$title_cap.'</h5>';
+												echo '<br>';
+												echo $excerpt;
 
-											echo '</li>';
-											$counter++;
-										//}
-									endforeach; ?>
+												echo '</li>';
+												$counter++;
+											//}
+										endforeach; ?>
 
-									</ul>
-								</div>
+										</ul>
+									</div>
+								</div>	
 
 						<?php endif;
 

@@ -28,7 +28,7 @@ function register_cpt_testimonial() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
-        'menu_icon' => 'dashicons-clipboard',
+        'menu_icon' => 'dashicons-format-status',
         'show_in_rest'=> true,
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
