@@ -128,7 +128,8 @@ address {
 .testimonial {
 
   text-align: center;
-  padding: 1% 15% 20px;
+  padding: 2% 10%;
+
 }
 .slide h3 {
   color: #d2232a;
@@ -140,17 +141,7 @@ address {
   font-size: 30px;
 
 }
-.green-btn {
-  background-color:#6ec176;
-  color:#FFF;
-  padding:15px 30px;
-  opacity: 1;
-}
 
-.green-btn:hover {
-  
-  opacity: .8;
-}
 
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; } */
 

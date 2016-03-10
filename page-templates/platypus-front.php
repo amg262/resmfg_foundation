@@ -350,7 +350,7 @@ get_header(); ?>
       								//itemMargin: 5
 	
   									});
-   							});
+   								});
 							</script>
 
 							<?php
@@ -365,12 +365,16 @@ get_header(); ?>
 										//foreach ($testimonial as $post) {
 
 											setup_postdata($post);
-											echo '<li>';
+											echo '<li class="slide">';
 											$title = $post->post_title;
 											$content = $post->post_content;
+											$excerpt = $post->post_excerpt;
+											$title_cap = strtoupper($title);
 
-											_e( '<h4>'.$title.'</h4>', 'resmfg_foundation' );
-											_e( '<p>'.$content.'</p>', 'resmfg_foundation' );
+											echo '<h3>'.$content.'</h3>';
+											echo '<h5>'.$title_cap.'</h5>';
+											echo '<br>';
+											echo $excerpt;
 
 											echo '</li>';
 											$counter++;
@@ -394,9 +398,11 @@ get_header(); ?>
 			<p>
 				<?php if ( get_field( 'button_link', 'option' ) ):
 					$link = get_field( 'button_link', 'option' );
+				else:
+					$link = '#';
 				endif; ?>
 
-				<a href="<?php echo $link; ?>" ><button style="background-color:#6ec176; color:#FFF; padding:15px 30px;">View Our Case Studies</button></a>
+				<a href="<?php echo $link; ?>" ><button class="green-btn">View Our Case Studies</button></a>
 			</p>
 		</div>
 	</section>
