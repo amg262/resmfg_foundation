@@ -25,6 +25,17 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), '2.3.0', true );
 
+	//wp_register_script( 'pad_flexslider_js', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider.js', array('jquery'));
+	wp_register_script( 'pad_flexslider_min', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider-min.js', array('jquery'));
+	wp_register_style( 'pad_foundation_style_css', get_template_directory_uri().'/style.css');
+	wp_register_style( 'pad_flexslider_css', get_template_directory_uri().'/assets/components/flexslider/flexslider.css');
+
+	//wp_enqueue_script( 'pad_flexslider_js' );
+	wp_enqueue_script( 'pad_flexslider_min' );
+
+	wp_enqueue_style( 'pad_foundation_style_css' );
+	wp_enqueue_style( 'pad_flexslider_css' );
+
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

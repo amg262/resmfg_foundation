@@ -358,7 +358,7 @@ get_header(); ?>
 							$testimonials = (array) get_field( 'testimonials' );
 							$counter = 0; ?>
 							
-							<div class="row columns small-12 flexslider">
+							<div class="small-12 flexslider">
 
 								<ul class="slides">	
 									<?php foreach ($testimonials as $post):			
