@@ -33,7 +33,11 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
   you could just enqueue this file (style.css) to the header and add your styles in this file
 
 ---------------------------------------------------------------------------- */
-
+/* --- UNIVERSAL --- */
+.clear {
+  clear: both !important;
+  height:0;
+}
 
 /* --- HEADER STYLES --- */
 .top-bar, .top-bar ul {

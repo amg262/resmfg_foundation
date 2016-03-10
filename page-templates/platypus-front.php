@@ -277,7 +277,7 @@ get_header(); ?>
 								echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><p><h3>'.$title.'</h3></p></a>'; ?>
 							 </div>
 						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
-						 </div>
+						 </div><!--end of column-->
 
 						<?php $count++; //increment count
 				        
@@ -294,7 +294,7 @@ get_header(); ?>
 				endif; //end of have rows ?>
 		</div>
 	</section>
-	<div style="clear:both; height: 0;"></div>
+	<div class="clear"></div>
 	<section>
 		<div class="">
 			
