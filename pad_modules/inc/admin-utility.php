@@ -42,7 +42,7 @@ function display_admin_option() {
 			'menu_slug' 	=> 'super-root-options',
 			'capability'	=> 'root_access',
 			'redirect'		=> false,
-			'icon_url'		=> 'dashicons-admin-network'
+			'icon_url'		=> 'dashicons-lock'
 		));
 
 	}
