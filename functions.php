@@ -68,7 +68,8 @@ function pad_foundation_load_scripts() {
 	//wp_register_script( 'foundation_min_js', get_template_directory().'/foundation/js/foundation.min.js', array('jquery'));
 	//wp_register_script( 'foundation_min_vendor', get_template_directory().'/foundation/js/vendor/what-input.min.js', array('jquery'));
 	wp_register_script( 'pad_foundation_js', get_template_directory_uri().'/pad_s/pad_s.js', array('jquery'));
-
+	wp_register_script( 'pad_flexslider_js', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider.js', array('jquery'));
+	//wp_register_script( 'pad_flexslider_min', get_template_directory_uri().'/assets/components/flexslider/jquery.flexslider-min.js', array('jquery'));
 
 	//wp_register_style( 'foundation_app_css', get_template_directory().'/foundation/css/app.css');
 	//wp_register_style( 'foundation_css', get_template_directory().'/foundation/css/foundation.css');
@@ -76,6 +77,8 @@ function pad_foundation_load_scripts() {
 	//wp_register_style( 'foundation_min_css', get_template_directory().'/foundation/css/foundation.min.css');
 	wp_register_style( 'pad_foundation_style_css', get_template_directory_uri().'/style.css');
 	wp_register_style( 'pad_foundation_css', get_template_directory_uri().'/pad_s/pad_s.css');
+	wp_register_style( 'pad_flexslider_css', get_template_directory_uri().'/assets/components/flexslider/flexslider.css');
+
 
 	//wp_enqueue_script( 'foundation_js' );
 	//wp_enqueue_script( 'foundation_app_js' );
@@ -83,12 +86,19 @@ function pad_foundation_load_scripts() {
 	//wp_enqueue_script( 'foundation_min_vendor' );
 	wp_enqueue_script( 'pad_foundation_js' );
 
+	wp_enqueue_script( 'pad_flexslider_js' );
+
+	//wp_enqueue_script( 'pad_flexslider_min' );
+
+
 	//wp_enqueue_style( 'foundation_css' );
 	//wp_enqueue_style( 'foundation_app_css' );
 	//wp_enqueue_style( 'foundation_flex_css' );
 	//wp_enqueue_style( 'foundation_min_css' );
 	wp_enqueue_style( 'pad_foundation_style_css' );
 	wp_enqueue_style( 'pad_foundation_css' );
+	wp_enqueue_style( 'pad_flexslider_css' );
+
 
 }
 /**

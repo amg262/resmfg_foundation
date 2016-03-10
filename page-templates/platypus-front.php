@@ -315,9 +315,11 @@ get_header(); ?>
 		<div class="text-center">
 			<?php 
 				//echo get_field('testimonial_section');
-				if ( get_field('testimonial_section') == "Single" ) {
-					if ( get_field( 'testimonial' ) ) {
-						
+				if ( get_field( 'testimonial' ) ) :
+
+					if ( get_field('testimonial_section') === "Single" ) {
+
+							
 						$testimonial = get_field( 'testimonial' );
 
 						foreach ($testimonial as $post) {
@@ -326,27 +328,28 @@ get_header(); ?>
 							_e( $post->post_title, 'resmfg_foundation' );
 							_e( $post->post_content, 'resmfg_foundation' );
 						}
-						//var_dump($testimonial);
-						//echo $testimonial['post_title'];
-						//echo $testimonial['post_content'];
-						//echo $title;
-						//var_dump($testimonial);
-						//echo '<h2>'.$title.'</h2>';
-						//echo '<p>'.$content.'</p>';
-					}
-				} elseif ( get_field('testimonial_section') == "Multiple" ) {
+							
+					} elseif ( get_field('testimonial_section') === "Multiple" ) {
 
-				} else {
-					if ( get_field( 'testimonial' ) ) {
+
 						$testimonial = (array) get_field( 'testimonial' );
-						$title = $testimonial['post_title'];
-						$content = $testimonial['post_content'];
-						//var_dump($testimonial);
-						//echo '<h2>'.$title.'</h2>';
-						echo '<p>'.$content.'</p>';
-					}
-				} 
-				wp_reset_postdata();
+						$counter = 0;
+
+						foreach ($testimonial as $post) {
+							setup_postdata($post);
+							$title = $post->post_title;
+							$content = $post->post_content;
+							$counter++;
+						}
+						
+
+					} else {
+
+						
+					} 
+
+					wp_reset_postdata();
+				endif;
 				?>
 			<p>
 				<?php if ( get_field( 'button_link', 'option' ) ):
