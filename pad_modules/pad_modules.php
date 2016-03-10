@@ -23,14 +23,14 @@ add_action( 'init', 'setup_pad_modules_scripts' );
 
 function setup_pad_modules_scripts() {
 
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'jquery-ui-core' );
+	//wp_enqueue_script( 'jquery' );
+	//wp_enqueue_script( 'jquery-ui-core' );
 
 	wp_register_script( 'pad_mod_js', get_template_directory_uri().'/pad_modules/assets/pad-scripts.js', array('jquery'));
 	wp_register_style( 'pad_mod_css', get_template_directory_uri().'/pad_modules/assets/pad-styles.css');
 
-	wp_enqueue_script( 'pad_mod_js' );
-	wp_enqueue_style( 'pad_mod_css' );
+	//wp_enqueue_script( 'pad_mod_js' );
+	//wp_enqueue_style( 'pad_mod_css' );
 }
 
 
