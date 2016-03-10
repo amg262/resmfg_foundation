@@ -48,7 +48,7 @@
 				            </address><!-- .contact-address -->
 				        <?php } ?>
 				    </p>
-			        <p>&nbsp;</p>
+			      
 			        <?php if ( get_field( 'platypus_link', 'option' ) !== 'Hide' ): ?>
 	                    <?php if(is_home() || is_front_page()) { ?>
 	                    <small>Design and Developed by <a itemprop="url" href="http://platypus-ad.com" target="_blank">Platypus Advertising + Design</a></small>
