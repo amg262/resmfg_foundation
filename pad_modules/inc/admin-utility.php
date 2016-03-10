@@ -7,9 +7,9 @@ defined( 'ABSPATH' ) or die( 'Plugin file cannot be accessed directly.' );
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
+		'page_title' 	=> 'Theme General Options',
+		'menu_title'	=> 'Theme Options',
+		'menu_slug' 	=> 'theme-general-options',
 		'capability'	=> 'manage_options',
 		'redirect'		=> false,
 		'icon_url'		=> 'dashicons-admin-tools'
@@ -18,13 +18,13 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Header Settings',
 		'menu_title'	=> 'Header',
-		'parent_slug'	=> 'theme-general-settings',
+		'parent_slug'	=> 'theme-general-options',
 	));
 
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Footer Settings',
 		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'theme-general-settings',
+		'parent_slug'	=> 'theme-general-options',
 	));
 
 
@@ -37,17 +37,48 @@ function display_admin_option() {
 	if ($admin === true) {
 
 		acf_add_options_page(array(
-			'page_title' 	=> 'Root Admin',
-			'menu_title'	=> 'Root Admin',
-			'menu_slug' 	=> 'root-admin-optoins',
+			'page_title' 	=> 'SuperRoot',
+			'menu_title'	=> 'SuperRoot',
+			'menu_slug' 	=> 'super-root-options',
 			'capability'	=> 'root_access',
 			'redirect'		=> false,
 			'icon_url'		=> 'dashicons-admin-network'
 		));
 
 	}
-}
 
+
+		acf_add_options_page(array(
+			'page_title' 	=> 'Admin II',
+			'menu_title'	=> 'Admin II',
+			'menu_slug' 	=> 'admin-ii-options',
+			'capability'	=> 'admin_2_access',
+			'redirect'		=> false,
+			'icon_url'		=> 'dashicons-admin-network'
+		));
+
+	
+
+
+}
+function is_pad_admin_2() {
+
+		global $user;
+		$super_admin = false;
+		$user = wp_get_current_user();
+		$curr = (array) $user->roles;
+		$roles = array('admin_2','administrator_2');
+
+		$roles_found = array_intersect($curr, $roles);
+	
+		if ( count( $roles_found ) > 0 ) {
+			$super_admin = true;
+		} else {
+			$super_admin = false;
+		}
+		return $super_admin;
+
+	}
 function is_pad_root_admin() {
 
 		global $user;
@@ -75,7 +106,7 @@ function hide_pad_acf_menu( $show ) {
 	$user = wp_get_current_user();
 
 	$curr = (array) $user->roles;
-	$roles = array( 'root_admin', 'super_root', 'administrator', 'webmaster' );
+	$roles = array( 'root_admin', 'administrator_2', 'administrator', 'webmaster' );
 	
 
 	$roles_found = array_intersect($curr, $roles);
