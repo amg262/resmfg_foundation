@@ -110,8 +110,9 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme General Settings',
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'manage_options',
-		'redirect'		=> false
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-admin-tools'
 	));
 
 	acf_add_options_sub_page(array(
@@ -137,15 +138,16 @@ function hide_acf_menu( $show ) {
 
 	$curr = (array) $user->roles;
 	$roles = array('root','administrator');
+	
 
-
-	if ( array_intersect($curr, $roles) ) {
-	    //The user has the "author" role
-	   // var_dump($roles);
-	    $show = false;
+	$roles_found = array_intersect($curr, $roles);
+	
+	if ( count( $roles_found ) > 0 ) {
+		$show = true;
+	} else {
+		$show = false;
 	}
-    
-    //return $show;
+
     return $show;
     
 }
