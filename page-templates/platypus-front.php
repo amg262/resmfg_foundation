@@ -144,7 +144,7 @@ get_header(); ?>
 	<!--</section>
 </div>-->
 	<section>
-		<div class="bucket-container columns small-12 medium-12 large-12">
+		<!--<div class="bucket-container columns small-12 medium-12 large-12">-->
 			<?php
 				// check if the repeater field has rows of data
 				if( have_rows('homepage_buckets') ):
@@ -294,7 +294,7 @@ get_header(); ?>
 				    wp_reset_postdata();
 
 				endif; //end of have rows ?>
-		</div>
+		<!--</div>-->
 	</section>
 	<div class="clear"></div>
 	<section>
@@ -314,7 +314,7 @@ get_header(); ?>
 
 		</div>
 
-		<div class="text-center">
+		<div class="text-center testimonial">
 			<?php 
 				//echo get_field('testimonial_section');
 				if ( get_field( 'testimonial' ) ) :
@@ -327,8 +327,9 @@ get_header(); ?>
 						foreach ($testimonial as $post) {
 							setup_postdata($post);
 							//var_dump($post);
-							_e( $post->post_title, 'resmfg_foundation' );
-							_e( $post->post_content, 'resmfg_foundation' );
+							_e( '<span class="title">'.$post->post_title.'</span>', 'resmfg_foundation' );
+							_e( '<span class="content">'.$post->post_content.'</span>', 'resmfg_foundation' );
+							_e( '<span class="excerpt">'.$post->excerpt.'</span>', 'resmfg_foundation' );
 						}
 							
 					} elseif ( get_field('testimonial_section') === "Multiple" ) {

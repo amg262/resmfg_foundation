@@ -119,6 +119,8 @@ address {
     /* opacity: .8; */
 }
 
+
+
 .homepage-subheading .sub_header p {
   background-color: #000;
     color: #FFCA59;
@@ -156,6 +158,7 @@ address {
   color:#FFF;
   padding:15px 30px;
   opacity: 1;
+  border-radius: 10px;
 }
 
 .green-btn:hover {
