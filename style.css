@@ -108,6 +108,17 @@ address {
 .bucket-container .column a:hover {
   opacity: .8;
 }
+
+.bucket-title {
+  padding: 0;
+  background-color: #ECECEC !important;
+}
+
+.odd {
+    background-color: #F7F7F7 !important;
+    /* opacity: .8; */
+}
+
 .homepage-subheading .sub_header p {
   background-color: #000;
     color: #FFCA59;

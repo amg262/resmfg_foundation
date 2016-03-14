@@ -267,7 +267,7 @@ get_header(); ?>
 				    	endif; ?>
 
 						 <div class="column <?php echo $column_class; ?> ">
-						 	<div class="">
+						
 							 	<?php
 
 							 	$title = get_sub_field('bucket_title');
@@ -276,8 +276,8 @@ get_header(); ?>
 
 							 	//var_dump($page);
 
-								echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><p><h3>'.$title.'</h3></p></a>'; ?>
-							 </div>
+								echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><p><h3 class="bucket-title">'.$title.'</h3></p></a>'; ?>
+							 
 						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
 						 </div><!--end of column-->
 
