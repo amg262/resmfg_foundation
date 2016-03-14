@@ -143,6 +143,18 @@ address {
   text-align: center;
   padding: 1% 15% 20px;
 }
+
+.testimonial .title {
+
+}
+.testimonial .content {
+  color:red;
+  font-size: 2.1vw;
+  font-style: italic;
+}
+.testimonial .excerpt {
+
+}
 .slide h3 {
   color: #d2232a;
   font-size: 36px;
@@ -156,7 +168,7 @@ address {
 .green-btn {
   background-color:#6ec176;
   color:#FFF;
-  padding:15px 30px;
+  padding: 20px 50px;
   opacity: 1;
   border-radius: 10px;
 }

@@ -327,9 +327,10 @@ get_header(); ?>
 						foreach ($testimonial as $post) {
 							setup_postdata($post);
 							//var_dump($post);
-							_e( '<span class="title">'.$post->post_title.'</span>', 'resmfg_foundation' );
-							_e( '<span class="content">'.$post->post_content.'</span>', 'resmfg_foundation' );
-							_e( '<span class="excerpt">'.$post->excerpt.'</span>', 'resmfg_foundation' );
+							//_e( '<span class="title">'.$post->post_title.'</span>', 'resmfg_foundation' );
+							_e( '<p><span class="content">'.$post->post_content.'</span></p>', 'resmfg_foundation' );
+							_e( '<p><span class="title">'.$post->post_title.'</span><br>', 'resmfg_foundation' );
+							_e( '<span class="excerpt">'.$post->excerpt.'</span></p>', 'resmfg_foundation' );
 						}
 							
 					} elseif ( get_field('testimonial_section') === "Multiple" ) {
