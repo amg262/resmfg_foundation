@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Platypus Industries
+Template Name: Platypus Capabilities
 */
 get_header(); ?>
 
@@ -71,10 +71,10 @@ get_header(); ?>
 		<!--<div class="bucket-container columns small-12 medium-12 large-12">-->
 			<?php
 				// check if the repeater field has rows of data
-				if( have_rows('industries_buckets') ):
+				if( have_rows('capabilities_buckets') ):
 
 					//Get number of rows
-					$net = count( get_field( 'industries_buckets' ) );
+					$net = count( get_field( 'capabilities_buckets' ) );
 					$total = intval( $net );
 					$count = 0; //loop counter
 					$index = 0;
@@ -82,7 +82,7 @@ get_header(); ?>
 					$space = " ";
 					$column_class = "col-";
 					$grid_ratio_class = "ratio-";
-					$grid_bucket_class = "industries bucket-grid-";
+					$grid_bucket_class = "capabilites bucket-grid-";
 
 					//Checking for oddd or even amount of rows
 					//Used for styling and applying class
@@ -104,7 +104,7 @@ get_header(); ?>
 
 				
 				 	// loop through the rows of bucket repeater field
-				    while ( have_rows('industries_buckets') ) : the_row();
+				    while ( have_rows('capabilities_buckets') ) : the_row();
 				    	$index++;
 
 				    	$column_class = "col-".$index;
@@ -132,7 +132,7 @@ get_header(); ?>
 							        case ( $grid_ratio <= 2 ):
 
 								        _e( '<div class="'.$grid_bucket_class.$space.$grid_ratio_class.$space.
-								        	'columns text-center small-up-1 medium-up-2 large-up-4">', 'resmfg_foundation' );
+								        	'columns text-center small-up-1 medium-up-1 large-up-2">', 'resmfg_foundation' );
 								        break;
 
 								    case ( $grid_ratio <= 3 ):
@@ -144,7 +144,7 @@ get_header(); ?>
 								    case ( $grid_ratio <= 4 ):
 
 								        _e( '<div class="'.$grid_bucket_class.$space.$grid_ratio_class.$space.
-								        	'columns text-center small-up-1 medium-up-2 large-up-4">', 'resmfg_foundation' );
+								        	'columns text-center small-up-1 medium-up-1 large-up-2">', 'resmfg_foundation' );
 								        break;
 
 								    case ( $grid_ratio <= 6 ):
@@ -195,6 +195,7 @@ get_header(); ?>
 							 	<?php
 
 							 	$title = get_sub_field('bucket_title');
+							 	$text = get_sub_field('bucket_text');
 							 	$image = get_sub_field( 'bucket_image' );
 							 	$page =  get_sub_field('bucket_page');
 

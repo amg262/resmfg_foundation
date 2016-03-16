@@ -158,7 +158,7 @@ get_header(); ?>
 					$space = " ";
 					$column_class = "col-";
 					$grid_ratio_class = "ratio-";
-					$grid_bucket_class = "bucket-grid-";
+					$grid_bucket_class = "frontpage bucket-grid-";
 
 					//Checking for oddd or even amount of rows
 					//Used for styling and applying class
@@ -271,6 +271,7 @@ get_header(); ?>
 							 	<?php
 
 							 	$title = get_sub_field('bucket_title');
+							 	$text = get_sub_field('bucket_text');
 							 	$image = get_sub_field( 'bucket_image' );
 							 	$page =  get_sub_field('bucket_page');
 
