@@ -111,14 +111,26 @@ address {
 
 .bucket-title {
   padding: 0;
-  background-color: #ECECEC !important;
+  margin: 0 !important;
+  background-color: #DADEE3 !important;
 }
 
 .odd {
-    background-color: #F7F7F7 !important;
+    background-color: #EDF0ED !important;
     /* opacity: .8; */
 }
 
+.bucket-grid-odd .column,
+.bucket-grid-even .column,
+.bucket-grid-odd.columns,
+.bucket-grid-even.columns {
+  padding: 0 !important;
+}
+
+.bucket-grid-odd .column a img,
+.bucket-grid-even .column a img {
+   padding: 7%;
+}
 
 
 .homepage-subheading .sub_header p {
@@ -128,6 +140,7 @@ address {
     margin-bottom: 0;
     line-height: 3;
     font-size: 20px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.75);
 }
 
 .subheader-banner {
