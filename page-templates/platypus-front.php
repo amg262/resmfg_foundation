@@ -271,7 +271,6 @@ get_header(); ?>
 							 	<?php
 
 							 	$title = get_sub_field('bucket_title');
-							 	$text = get_sub_field('bucket_text');
 							 	$image = get_sub_field( 'bucket_image' );
 							 	$page =  get_sub_field('bucket_page');
 

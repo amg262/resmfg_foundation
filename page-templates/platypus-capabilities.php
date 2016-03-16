@@ -197,11 +197,23 @@ get_header(); ?>
 							 	$title = get_sub_field('bucket_title');
 							 	$text = get_sub_field('bucket_text');
 							 	$image = get_sub_field( 'bucket_image' );
-							 	$page =  get_sub_field('bucket_page');
+							 	$page =  get_sub_field('bucket_page'); ?>
 
-							 	//var_dump($page);
+							 	<div class="left text-left">
+							 		<?php echo '<a href='.$page.'><img class="right" src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /></a>'; ?>
+							 		<h3><?php echo $title; ?></h3>
+							 		<p><?php echo $text; ?></p>
+							 		<p><a href="<?php echo $link; ?>" ><button class="green-btn">Read More</button></a></p>
 
-								//echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><h3 class="bucket-title">'.$title.'</h3></a>'; ?>
+							 	</div>
+
+							 	<div class="right text-right">
+							 		<?php //echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /></a>'; ?>
+							 	</div>
+
+							 	<?php //var_dump($page);
+
+								 ?>
 							 
 						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
 						 </div><!--end of column-->

@@ -132,6 +132,11 @@ address {
    padding: 7%;
 }
 
+.capabilites.bucket-grid-odd .column a img,
+.capabilites.bucket-grid-even .column a img {
+   padding: 20px;
+   float:right;
+}
 
 .homepage-subheading .sub_header p {
   background-color: #000;
