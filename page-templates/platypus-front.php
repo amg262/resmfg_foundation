@@ -303,7 +303,7 @@ get_header(); ?>
 			<div class="homepage-subheading">
 				<?php if ( get_field( 'sub_header' ) ) {
 					$sub_header = get_field( 'sub_header' );
-					echo '<div class="sub_header">'.$sub_header.'</div>';
+					echo '<div class="sub_header">'.$sub_header.'</div><div class="clear"></div>';
 				} ?>
 
 				<?php if ( get_field( 'sub_header_banner' ) ) {

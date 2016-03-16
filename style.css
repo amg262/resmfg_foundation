@@ -70,6 +70,11 @@ address {
   font-style: normal;
 }
 
+#footer-container {
+    background-color: #007BB5;
+    color: #FFF;
+}
+
 /* --- FRONT PAGE TEMPLATE STYLES --- */
 #front-hero {
     background-attachment: fixed !important;
@@ -129,7 +134,7 @@ address {
 
 .bucket-grid-odd .column a img,
 .bucket-grid-even .column a img {
-   padding: 7%;
+   padding: 10%;
 }
 
 .capabilites.bucket-grid-odd .column a img,
