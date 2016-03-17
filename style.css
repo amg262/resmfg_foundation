@@ -205,6 +205,11 @@ address {
   opacity: .8;
 }
 
+/** CAPABILTIES **/
+.capabilites .column p {
+    padding:5%;
+}
+
 /*#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; } */
 
 
