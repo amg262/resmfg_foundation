@@ -200,11 +200,12 @@ get_header(); ?>
 							 	$page =  get_sub_field('bucket_page'); ?>
 
 							 	<div class="left text-left">
-							 		<p>
-								 		<?php echo '<a href='.$page.'><img class="right" src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /></a>'; ?>
-								 		<h3><?php echo $title; ?></h3>
-								 		<?php _e( $text, 'resmfg_foundation'); ?>
-								 		<a href="<?php echo $link; ?>" ><button class="green-btn">Read More</button></a></p>
+							 		<div><?php echo '<a href='.$page.'><img class="right" src="'.$image['sizes']['capability-image'].'" alt="'.$image['alt'].'"  /></a>'; ?></div>
+							 		
+							 		<p class="capability-text">
+							 		<h3><?php echo $title; ?></h3>
+							 			<?php echo $text; ?>
+							 			<?php echo '<br><a href='.$link.'><button class="green-btn">Read More</button></a>'; ?>
 							 		</p>
 							 	</div>
 

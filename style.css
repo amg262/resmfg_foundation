@@ -139,8 +139,11 @@ address {
 
 .capabilites.bucket-grid-odd .column a img,
 .capabilites.bucket-grid-even .column a img {
-   padding: 20px;
+   padding: 0;
    float:right;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #B5B2B2;
+    margin: 10% 5%;
 }
 
 .homepage-subheading .sub_header p {
