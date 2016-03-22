@@ -11,7 +11,7 @@ include_once( 'cpt/testimonials-cpt.php' );
 /**
 * Admin and theme utilities
 */
-require_once( 'inc/admin-utility.php' );
+//require_once( 'inc/admin-utility.php' );
 require_once( 'inc/image-sizes.php' );
 require_once( 'inc/script-styles.php' );
 
