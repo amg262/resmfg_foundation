@@ -52,9 +52,9 @@
 					<ul class="menu">
 
 						<?php if ( get_field( 'logo_type', 'option' ) == 'Image' ) {
-							echo 'Image';
+							//echo 'Image';
 							$image = get_field( 'logo_image', 'option' );
-							_e( '<a href='.esc_url( home_url( '/' ) ).' ><img src='.$image['url'].' alt=='.$image['alt'].' width="250" height="auto" /></a>', 'resmfg_foundation');
+							_e( '<a href='.esc_url( home_url( '/' ) ).' ><img src='.$image['url'].' alt=='.$image['alt'].' width="200" height="auto" /></a>', 'resmfg_foundation');
 
 						} else if ( get_field( 'logo_type', 'option' ) == 'Text' ) {
 

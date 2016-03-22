@@ -266,7 +266,7 @@ get_header(); ?>
 				    		$column_class .= $space."odd";
 				    	endif; ?>
 
-						 <div class="column <?php echo $column_class; ?> ">
+						 <div class="column <?php echo $column_class; ?> image-wrapper overlay-fade-in">
 						
 							 	<?php
 
@@ -277,6 +277,7 @@ get_header(); ?>
 							 	//var_dump($page);
 
 								echo '<a href='.$page.'><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'"  /><h3 class="bucket-title">'.$title.'</h3></a>'; ?>
+		
 							 
 						    <!--<img src="//placehold.it/300x300" class="thumbnail" alt="">-->
 						 </div><!--end of column-->

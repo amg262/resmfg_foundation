@@ -47,7 +47,15 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
 .top-bar .menu a {
     color: #0076AD !important
 }
-
+#masthead {
+      max-height: 75px;
+      height:100%;
+}
+.menu a img {
+    position: relative;
+    z-index: 1000;
+    margin: 2% 0 2% 100px;
+}
 .sticky {
     z-index: 9999 !important;
 }
@@ -148,14 +156,16 @@ address {
 
 .homepage-subheading .sub_header p {
   background-color: #000;
-    color: #FFCA59;
+    color: #FDCF04;
     padding: 4% 10%;
     margin-bottom: 0;
     line-height: 3;
     font-size: 20px;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.75);
 }
-
+.homepage-subheading .sub_header p strong {
+  color: #FFF !important;
+}
 .subheader-banner {
   /*max-height: 600px;*/
   /*min-height: 200px;
@@ -207,6 +217,9 @@ address {
   
   opacity: .8;
 }
+
+/** GLOBAL IMAGE HOVER AFFECTS **/
+
 
 /** CAPABILTIES **/
 .capabilites .column p {
